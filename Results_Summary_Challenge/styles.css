@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Hanken Grotesk';
+}
+
+.results-container {
+    width: 615px;
+    height: 430px;
+    box-shadow: 0px 15px 50px lightgrey;
+    border-radius: 30px;
+}
+
+#purple-box {
+    width: 307.5px;
+    height: 430px;
+    background-image: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 30px;
+}
+
+h1 {
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+h2 {
+    font-size: 19px;
+    font-weight: 600;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+#result-h {
+    text-align: center;
+    color: hsl(241, 100%, 89%);
+}
+
+#summary-h {
+    margin-left: 38.438px;
+}
+
+#circle {
+    width: 164px;
+    height: 164px;
+    background-image: linear-gradient(180deg, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#number-lg {
+    color: white;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 55px;
+}
+
+#of-100 {
+    color: hsla(241, 100%, 89%, 50%);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+p {
+    color: hsla(221, 100%, 96%, 75%);
+    margin: 20px;
+    font-size: 14px;
+}
+
+#alerts {
+    margin: auto;
+}
+
+.alert {
+    width: 75%;
+    height: 45px;
+    margin: auto;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+    font-size: 80%;
+    border: 1px;
+}
+
+.alert-danger {
+    background-color: hsla(0, 100%, 67%, 10%);
+}
+
+.alert-danger .alert-span {
+    color: hsla(0, 53%, 46%, 0.75);
+}
+
+.alert-warning {
+    background-color: hsla(39, 100%, 56%, 10%);
+}
+
+.alert-warning .alert-span {
+    color: hsla(39, 71%, 46%, 0.75);
+}
+
+.alert-success {
+    background-color: hsla(166, 100%, 37%, 10%);
+}
+
+.alert-success .alert-span {
+    color: hsla(166, 86%, 27%, 0.75);
+}
+
+.alert-primary {
+    background-color: hsla(234, 85%, 45%, 10%);
+    margin-bottom: 10%;
+}
+
+.alert-primary .alert-span {
+    color: hsla(234, 77%, 36%, 0.75);
+}
+
+.btn-dark {
+    width: 75%;
+    height: 10%;
+    margin-left: 38.438px;
+    background-color: hsl(224, 30%, 27%);
+    font-size: 80%;
+    font-weight: 500;
+    border-radius: 30px;
+}
