@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+#mobile-menu {
+  display: none;
+}
+
 .container {
   display: grid;
   grid-template-areas: "header header header header header header" "left left left left right right" "footer footer footer footer footer footer" "attribution attribution attribution attribution attribution attribution";
@@ -77,7 +81,7 @@ a {
   margin: 0;
   line-height: 1.4;
 }
-.container .left #main-article .column .btn {
+.container .left #main-article .btn {
   color: hsl(36, 100%, 99%);
   background: hsl(5, 85%, 63%);
   border: none;
@@ -89,7 +93,7 @@ a {
   text-transform: uppercase;
   margin-top: 37px;
 }
-.container .left #main-article .column .btn:hover {
+.container .left #main-article .btn:hover {
   background: hsl(240, 100%, 5%);
 }
 .container .right {
@@ -101,7 +105,8 @@ a {
 .container .right #new-articles {
   background: hsl(240, 100%, 5%);
   padding: 10px 20px;
-  width: 300px;
+  margin-left: 30px;
+  width: auto;
 }
 .container .right #new-articles hr {
   border: 0.5px solid hsl(236, 13%, 42%);
@@ -149,11 +154,14 @@ a {
   color: hsl(233, 8%, 79%);
   font-size: 25px;
 }
-.container .top-articles .column .top-article-right h3 {
+.container .top-articles .column .top-article-right a {
+  color: hsl(240, 100%, 5%);
+}
+.container .top-articles .column .top-article-right a h3 {
   margin: 0;
   margin-top: 10px;
 }
-.container .top-articles .column .top-article-right h3:hover {
+.container .top-articles .column .top-article-right a h3:hover {
   color: hsl(5, 85%, 63%);
 }
 .container .top-articles .column .top-article-right p {
@@ -186,6 +194,30 @@ a {
     display: block;
     margin: 0;
   }
+  #mobile-menu {
+    display: none;
+    z-index: 1000;
+    background-color: hsl(36, 100%, 99%);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 60%;
+    height: 100%;
+  }
+  #mobile-menu #close-icon {
+    float: right;
+    margin: 50px;
+    cursor: pointer;
+  }
+  #mobile-menu #mobile-nav {
+    padding-top: 125px;
+    padding-left: 30px;
+  }
+  #mobile-menu .m-nav-item {
+    display: block;
+    margin-bottom: 25px;
+    color: hsl(240, 100%, 5%);
+  }
   .container {
     display: grid;
     grid-template-areas: "header header" "left left" "right right" "footer footer" "attribution attribution";
@@ -196,6 +228,8 @@ a {
   .container .header #mobile-menu-icon {
     display: block;
     float: right;
+    margin-top: 7px;
+    cursor: pointer;
   }
   .container .left #landing-img-desktop {
     display: none;
@@ -205,8 +239,8 @@ a {
     width: 100%;
     height: auto;
   }
-  .container .left #main-article .column {
-    flex-direction: row;
+  .container .left #main-article {
+    display: block;
   }
   .container .left #main-article .column h1 {
     font-size: 35px;
@@ -221,9 +255,8 @@ a {
   .container .left #main-article .column p br {
     display: none;
   }
-  .container .left #main-article .column .btn {
-    display: flex;
-    flex-direction: row;
+  .container .right #new-articles {
+    margin-left: 0;
   }
   .container .top-articles {
     display: flex;
@@ -242,6 +275,8 @@ a {
   .container .attribution #span-1 {
     display: block;
     float: none;
+    margin-top: 25px;
+    margin-bottom: 15px;
   }
   .container .attribution #span-2 {
     display: block;

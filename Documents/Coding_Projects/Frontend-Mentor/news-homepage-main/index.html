@@ -15,6 +15,22 @@
 </head>
 
 <body>
+  <div id="mobile-menu">
+    <svg id="close-icon" width="32" height="31" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#00001A" fill-rule="evenodd">
+        <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+        <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+      </g>
+    </svg>
+    <nav id="mobile-nav">
+      <a href="#" class="m-nav-item">Home</a>
+      <a href="#" class="m-nav-item">New</a>
+      <a href="#" class="m-nav-item">Popular</a>
+      <a href="#" class="m-nav-item">Trending</a>
+      <a href="#" class="m-nav-item">Categories</a>
+    </nav>
+  </div>
+
   <div class="container">
     <header class="header">
       <svg id="header-logo" width="65" height="40" xmlns="http://www.w3.org/2000/svg">
@@ -43,16 +59,18 @@
       <img id="landing-img-mobile" src="assets/images/image-web-3-mobile.jpg">
       <div id="main-article">
         <div class="column">
-          <h1>The Bright <br>Future of <br>Web 3.0?</h1>
+          <h1>The Bright Future of Web 3.0?</h1>
         </div>
         <div class="column">
-          <p>We dive into the next evolution of the web that <br>claims to put the power of the platforms back <br>into
+          <p>We dive into the next evolution of the web that claims to put the power of the platforms back
+            into
             the
             hands
             of
             the
             people.
-            But is it really <br>fulfilling its promise?</p>
+            But is it really fulfilling its promise?
+          </p>
           <button class="btn">Read more</button>
         </div>
       </div>
@@ -122,6 +140,23 @@
       <span id="span-2">Coded by <b>Alfie Mitchell</b></span>
     </footer>
   </div>
+
+  <script type="text/javascript">
+    var menuIcon = document.getElementById("mobile-menu-icon").addEventListener("click", menuOpen);
+    var closeIcon = document.getElementById("close-icon").addEventListener("click", menuClose);
+    var mobileMenu = document.getElementById("mobile-menu");
+    var body = document.body;
+
+    function menuOpen() {
+      mobileMenu.style.display = "block";
+      body.style.background = "hsla(0, 0%, 0%, 40%)";
+    }
+
+    function menuClose() {
+      mobileMenu.style.display = "none";
+      body.style.background = "hsl(36, 100%, 99%)";
+    }
+  </script>
 </body>
 
 </html>
