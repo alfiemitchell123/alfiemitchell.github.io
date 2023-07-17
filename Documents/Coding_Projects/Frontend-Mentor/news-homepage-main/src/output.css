@@ -1,0 +1,252 @@
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter-VariableFont.ttf");
+}
+body {
+  font-family: Inter;
+  margin: 30px 100px 30px 100px;
+  padding: 50px;
+  box-sizing: border-box;
+  background: hsl(36, 100%, 99%);
+}
+
+p {
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "header header header header header header" "left left left left right right" "footer footer footer footer footer footer" "attribution attribution attribution attribution attribution attribution";
+}
+.container .header {
+  grid-area: header;
+}
+.container .header #header-logo {
+  float: left;
+}
+.container .header nav {
+  float: right;
+}
+.container .header nav .nav-item {
+  text-decoration: none;
+  padding-left: 15px;
+  color: hsl(236, 13%, 42%);
+}
+.container .header nav .nav-item:hover {
+  color: hsl(5, 85%, 63%);
+}
+.container .header #mobile-menu-icon {
+  display: none;
+}
+.container .left {
+  margin-top: 50px;
+  grid-area: left;
+}
+.container .left #landing-img-desktop {
+  width: 100%;
+  height: auto;
+}
+.container .left #landing-img-mobile {
+  display: none;
+}
+.container .left #main-article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.container .left #main-article .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  height: 100%;
+  padding-top: 30px;
+}
+.container .left #main-article .column h1 {
+  font-weight: 800;
+  font-size: 45px;
+  margin: 0;
+}
+.container .left #main-article .column p {
+  color: hsl(236, 13%, 42%);
+  margin: 0;
+  line-height: 1.4;
+}
+.container .left #main-article .column .btn {
+  color: hsl(36, 100%, 99%);
+  background: hsl(5, 85%, 63%);
+  border: none;
+  width: 190px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 37px;
+}
+.container .left #main-article .column .btn:hover {
+  background: hsl(240, 100%, 5%);
+}
+.container .right {
+  margin-top: 50px;
+  grid-area: right;
+  display: flex;
+  justify-content: flex-end;
+}
+.container .right #new-articles {
+  background: hsl(240, 100%, 5%);
+  padding: 10px 20px;
+  width: 300px;
+}
+.container .right #new-articles hr {
+  border: 0.5px solid hsl(236, 13%, 42%);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.container .right #new-articles h1 {
+  color: hsl(35, 77%, 62%);
+}
+.container .right #new-articles .new-article a {
+  color: hsl(36, 100%, 99%);
+  font-size: 14px;
+}
+.container .right #new-articles .new-article a:hover {
+  color: hsl(35, 77%, 62%);
+}
+.container .right #new-articles .new-article p {
+  color: hsl(233, 8%, 79%);
+}
+.container .top-articles {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 75px;
+}
+.container .top-articles .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.container .top-articles .column img {
+  width: 100px;
+  height: 140px;
+}
+.container .top-articles .column .top-article-right {
+  position: absolute;
+  float: right;
+  padding-left: 120px;
+}
+.container .top-articles .column .top-article-right h2 {
+  margin: 0;
+  color: hsl(233, 8%, 79%);
+  font-size: 25px;
+}
+.container .top-articles .column .top-article-right h3 {
+  margin: 0;
+  margin-top: 10px;
+}
+.container .top-articles .column .top-article-right h3:hover {
+  color: hsl(5, 85%, 63%);
+}
+.container .top-articles .column .top-article-right p {
+  line-height: 1.6;
+}
+.container .attribution {
+  text-align: center;
+  grid-area: attribution;
+  margin-top: 75px;
+  color: hsl(233, 8%, 79%);
+}
+.container .attribution #span-1 {
+  float: left;
+}
+.container .attribution #span-1 a {
+  color: hsl(236, 13%, 42%);
+}
+.container .attribution #span-1 a:hover {
+  color: hsl(5, 85%, 63%);
+}
+.container .attribution #span-2 {
+  float: right;
+}
+.container .attribution #span-2 b {
+  color: hsl(236, 13%, 42%);
+}
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+    margin: 0;
+  }
+  .container {
+    display: grid;
+    grid-template-areas: "header header" "left left" "right right" "footer footer" "attribution attribution";
+  }
+  .container .header nav {
+    display: none;
+  }
+  .container .header #mobile-menu-icon {
+    display: block;
+    float: right;
+  }
+  .container .left #landing-img-desktop {
+    display: none;
+  }
+  .container .left #landing-img-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .container .left #main-article .column {
+    flex-direction: row;
+  }
+  .container .left #main-article .column h1 {
+    font-size: 35px;
+    display: block;
+  }
+  .container .left #main-article .column h1 br {
+    display: none;
+  }
+  .container .left #main-article .column p {
+    line-height: 1.6;
+  }
+  .container .left #main-article .column p br {
+    display: none;
+  }
+  .container .left #main-article .column .btn {
+    display: flex;
+    flex-direction: row;
+  }
+  .container .top-articles {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .container .top-articles .column {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+  .container .attribution {
+    margin: 0;
+  }
+  .container .attribution #span-1 {
+    display: block;
+    float: none;
+  }
+  .container .attribution #span-2 {
+    display: block;
+    float: none;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
